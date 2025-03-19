@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - Shoply</title>
+    <meta name="description" content="Create a new Shoply account" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-wrapper">
+          <div class="logo">
+            <a href="../index.html">
+              <img
+                src="assets/logo.svg"
+                style="width: auto; height: 110px"
+                alt=""
+              />
+            </a>
+          </div>
+          <nav class="main-nav">
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle"
+                  >Categories <i class="fas fa-chevron-down"></i
+                ></a>
+                <div class="dropdown-menu">
+                  <a href="#" data-category="electronics">Electronics</a>
+                  <a href="#" data-category="clothing">Clothing</a>
+                  <a href="#" data-category="home">Home & Kitchen</a>
+                  <a href="#" data-category="beauty">Beauty</a>
+                </div>
+              </li>
+              <li><a href="#">New Arrivals</a></li>
+              <li><a href="#">Deals</a></li>
+            </ul>
+          </nav>
+          <div class="header-actions">
+            <div class="search-container">
+              <input
+                type="text"
+                id="search-input"
+                placeholder="Search products..."
+              />
+              <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="header-icons">
+              <a href="login.html" class="header-icon active" id="account-icon">
+                <i class="fas fa-user"></i>
+                <span class="icon-text">Account</span>
+              </a>
+              <a href="cart.html" class="header-icon" id="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="icon-text">Cart</span>
+                <span class="cart-count">0</span>
+              </a>
+            </div>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobile-menu-header">
+        <div class="logo">
+          <a href="../index.html">Shoply</a>
+        </div>
+        <button class="mobile-menu-close" id="mobile-menu-close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <nav class="mobile-nav">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li class="mobile-dropdown">
+            <a href="#" class="mobile-dropdown-toggle"
+              >Categories <i class="fas fa-chevron-down"></i
+            ></a>
+            <div class="mobile-dropdown-menu">
+              <a href="#" data-category="electronics">Electronics</a>
+              <a href="#" data-category="clothing">Clothing</a>
+              <a href="#" data-category="home">Home & Kitchen</a>
+              <a href="#" data-category="beauty">Beauty</a>
+            </div>
+          </li>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Deals</a></li>
+          <li><a href="login.html" class="active">Account</a></li>
+          <li>
+            <a href="cart.html"
+              >Cart <span class="mobile-cart-count">0</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <main>
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="../index.html">Home</a>
+          <span class="separator">/</span>
+          <span class="current">Register</span>
+        </div>
+
+        <section class="auth-section">
+          <div class="auth-container">
+            <div class="auth-form-container">
+              <h1 class="auth-title">Create an Account</h1>
+              <div class="social-login">
+                <button class="social-btn facebook">
+                  <i class="fab fa-facebook-f"></i> Register with Facebook
+                </button>
+                <button class="social-btn google">
+                  <i class="fab fa-google"></i> Register with Google
+                </button>
+              </div>
+              <div class="divider">
+                <span>or</span>
+              </div>
+              <form id="register-form" class="auth-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input
+                      type="text"
+                      id="first-name"
+                      name="first-name"
+                      placeholder="Your first name"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input
+                      type="text"
+                      id="last-name"
+                      name="last-name"
+                      placeholder="Your last name"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Your email address"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <div class="password-input">
+                    <input
+                      type="password"
+                      id="password"
+                      name="password"
+                      placeholder="Your password"
+                      required
+                    />
+                    <button
+                      type="button"
+                      class="toggle-password"
+                      id="toggle-password"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                  </div>
+                  <div class="password-strength" id="password-strength">
+                    <div class="strength-bar">
+                      <div
+                        class="strength-progress"
+                        id="strength-progress"
+                      ></div>
+                    </div>
+                    <span class="strength-text" id="strength-text"
+                      >Password strength</span
+                    >
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="confirm-password">Confirm Password</label>
+                  <div class="password-input">
+                    <input
+                      type="password"
+                      id="confirm-password"
+                      name="confirm-password"
+                      placeholder="Confirm your password"
+                      required
+                    />
+                    <button
+                      type="button"
+                      class="toggle-password"
+                      id="toggle-confirm-password"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="form-terms">
+                  <div class="custom-checkbox">
+                    <input type="checkbox" id="terms" name="terms" required />
+                    <label for="terms"
+                      >I agree to the <a href="#">Terms of Service</a> and
+                      <a href="#">Privacy Policy</a></label
+                    >
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                  Create Account
+                </button>
+              </form>
+              <div class="auth-footer">
+                <p>Already have an account? <a href="login.html">Login</a></p>
+              </div>
+            </div>
+            <div class="auth-info">
+              <div class="auth-info-content">
+                <h2>Join Shoply Today!</h2>
+                <p>
+                  Create an account to enjoy all the benefits of shopping with
+                  Shoply. Get exclusive offers, easily track your orders, and
+                  enjoy a personalized shopping experience.
+                </p>
+                <ul class="auth-benefits">
+                  <li>
+                    <i class="fas fa-check-circle"></i> Access to exclusive
+                    deals
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i> Save your shipping
+                    addresses
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i> View your order history
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i> Create wishlists for
+                    later
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>Shoply</h3>
+            <p>Your one-stop shop for all your needs.</p>
+            <div class="social-icons">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="Pinterest"
+                ><i class="fab fa-pinterest-p"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3>Shop</h3>
+            <ul>
+              <li><a href="#">All Products</a></li>
+              <li><a href="#">New Arrivals</a></li>
+              <li><a href="#">Best Sellers</a></li>
+              <li><a href="#">Deals & Promotions</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Customer Service</h3>
+            <ul>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Shipping & Returns</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Newsletter</h3>
+            <p>Subscribe to get special offers and updates.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your email address" required />
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 Shoply. All rights reserved.</p>
+          <div class="payment-icons">
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-amex"></i>
+            <i class="fab fa-cc-paypal"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="notification" class="notification"></div>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/cart.js"></script>
+  </body>
+</html>

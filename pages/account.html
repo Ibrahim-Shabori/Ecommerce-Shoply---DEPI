@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - Shoply</title>
+    <meta name="description" content="Manage your Shoply account">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img
+                        src="assets/logo.svg"
+                        style="width: auto; height: 110px"
+                        alt=""
+                      />
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Categories <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-menu">
+                                <a href="#" data-category="electronics">Electronics</a>
+                                <a href="#" data-category="clothing">Clothing</a>
+                                <a href="#" data-category="home">Home & Kitchen</a>
+                                <a href="#" data-category="beauty">Beauty</a>
+                            </div>
+                        </li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Deals</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div class="search-container">
+                        <input type="text" id="search-input" placeholder="Search products...">
+                        <button id="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="header-icons">
+                        <a href="login.html" class="header-icon active" id="account-icon">
+                            <i class="fas fa-user"></i>
+                            <span class="icon-text">Account</span>
+                        </a>
+                        <a href="cart.html" class="header-icon" id="cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="icon-text">Cart</span>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </div>
+                    <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <a href="../index.html">Shoply</a>
+            </div>
+            <button class="mobile-menu-close" id="mobile-menu-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li class="mobile-dropdown">
+                    <a href="#" class="mobile-dropdown-toggle">Categories <i class="fas fa-chevron-down"></i></a>
+                    <div class="mobile-dropdown-menu">
+                        <a href="#" data-category="electronics">Electronics</a>
+                        <a href="#" data-category="clothing">Clothing</a>
+                        <a href="#" data-category="home">Home & Kitchen</a>
+                        <a href="#" data-category="beauty">Beauty</a>
+                    </div>
+                </li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Deals</a></li>
+                <li><a href="login.html" class="active">Account</a></li>
+                <li><a href="cart.html">Cart <span class="mobile-cart-count">0</span></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">Home</a>
+                <span class="separator">/</span>
+                <span class="current">My Account</span>
+            </div>
+
+            <section class="account-section">
+                <div class="account-container">
+                    <div class="account-sidebar">
+                        <div class="account-user">
+                            <div class="user-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="user-info">
+                                <h3 id="user-name">John Doe</h3>
+                                <p id="user-email">john.doe@example.com</p>
+                            </div>
+                        </div>
+                        <nav class="account-nav">
+                            <ul>
+                                <li><a href="#" class="active" data-tab="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                                <li><a href="#" data-tab="orders"><i class="fas fa-shopping-bag"></i> Orders</a></li>
+                                <li><a href="#" data-tab="addresses"><i class="fas fa-map-marker-alt"></i> Addresses</a></li>
+                                <li><a href="#" data-tab="wishlist"><i class="fas fa-heart"></i> Wishlist</a></li>
+                                <li><a href="#" data-tab="account-details"><i class="fas fa-user-edit"></i> Account Details</a></li>
+                                <li><a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="account-content">
+                        <div id="dashboard" class="account-tab active">
+                            <h2>Dashboard</h2>
+                            <p>Hello <span id="dashboard-name">John</span> (not <span id="dashboard-name2">John</span>? <a href="#" id="logout-link">Log out</a>)</p>
+                            <p>From your account dashboard you can view your recent orders, manage your shipping and billing addresses, and edit your password and account details.</p>
+                            
+                            <div class="dashboard-cards">
+                                <div class="dashboard-card">
+                                    <div class="card-icon">
+                                        <i class="fas fa-shopping-bag"></i>
+                                    </div>
+                                    <div class="card-content">
+                                        <h3>Orders</h3>
+                                        <p id="order-count">0 Orders</p>
+                                    </div>
+                                </div>
+                                <div class="dashboard-card">
+                                    <div class="card-icon">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                    <div class="card-content">
+                                        <h3>Wishlist</h3>
+                                        <p id="wishlist-count">0 Products</p>
+                                    </div>
+                                </div>
+                                <div class="dashboard-card">
+                                    <div class="card-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="card-content">
+                                        <h3>Addresses</h3>
+                                        <p id="address-count">0 Addresses</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="recent-orders">
+                                <h3>Recent Orders</h3>
+                                <div class="table-responsive">
+                                    <table class="order-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Order</th>
+                                                <th>Date</th>
+                                                <th>Status</th>
+                                                <th>Total</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="recent-orders-table">
+                                            <tr class="no-orders">
+                                                <td colspan="5">No orders found</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="orders" class="account-tab">
+                            <h2>Orders</h2>
+                            <div class="table-responsive">
+                                <table class="order-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Order</th>
+                                            <th>Date</th>
+                                            <th>Status</th>
+                                            <th>Total</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="orders-table">
+                                        <tr class="no-orders">
+                                            <td colspan="5">No orders found</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div id="addresses" class="account-tab">
+                            <h2>Addresses</h2>
+                            <p>The following addresses will be used on the checkout page by default.</p>
+                            
+                            <div class="addresses-container">
+                                <div class="address-card">
+                                    <div class="address-header">
+                                        <h3>Billing Address</h3>
+                                        <a href="#" class="edit-address" data-type="billing"><i class="fas fa-edit"></i> Edit</a>
+                                    </div>
+                                    <div class="address-details" id="billing-address">
+                                        <p>You haven't set up a billing address yet.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="address-card">
+                                    <div class="address-header">
+                                        <h3>Shipping Address</h3>
+                                        <a href="#" class="edit-address" data-type="shipping"><i class="fas fa-edit"></i> Edit</a>
+                                    </div>
+                                    <div class="address-details" id="shipping-address">
+                                        <p>You haven't set up a shipping address yet.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="address-form-container hidden" id="address-form-container">
+                                <h3 id="address-form-title">Edit Address</h3>
+                                <form id="address-form">
+                                    <input type="hidden" id="address-type" value="billing">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="first-name">First Name</label>
+                                            <input type="text" id="address-first-name" name="first-name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="last-name">Last Name</label>
+                                            <input type="text" id="address-last-name" name="last-name" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="company">Company (optional)</label>
+                                        <input type="text" id="address-company" name="company">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="address-1">Address Line 1</label>
+                                        <input type="text" id="address-1" name="address-1" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="address-2">Address Line 2 (optional)</label>
+                                        <input type="text" id="address-2" name="address-2">
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="city">City</label>
+                                            <input type="text" id="address-city" name="city" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="state">State</label>
+                                            <input type="text" id="address-state" name="state" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="postcode">Postal Code</label>
+                                            <input type="text" id="address-postcode" name="postcode" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="country">Country</label>
+                                            <select id="address-country" name="country" required>
+                                                <option value="">Select a country</option>
+                                                <option value="US">United States</option>
+                                                <option value="CA">Canada</option>
+                                                <option value="GB">United Kingdom</option>
+                                                <option value="AU">Australia</option>
+                                                <!-- More countries would be added here -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Phone</label>
+                                        <input type="tel" id="address-phone" name="phone" required>
+                                    </div>
+                                    <div class="form-buttons">
+                                        <button type="button" id="cancel-address" class="btn btn-outline">Cancel</button>
+                                        <button type="submit" class="btn btn-primary">Save Address</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        
+                        <div id="wishlist" class="account-tab">
+                            <h2>Wishlist</h2>
+                            <div id="wishlist-empty" class="wishlist-empty">
+                                <p>Your wishlist is empty.</p>
+                                <a href="../index.html" class="btn btn-primary">Browse Products</a>
+                            </div>
+                            <div id="wishlist-products" class="product-grid">
+                                <!-- Wishlist products will be added via JavaScript -->
+                            </div>
+                        </div>
+                        
+                        <div id="account-details" class="account-tab">
+                            <h2>Account Details</h2>
+                            <form id="account-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="account-first-name">First Name</label>
+                                        <input type="text" id="account-first-name" name="first-name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="account-last-name">Last Name</label>
+                                        <input type="text" id="account-last-name" name="last-name" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="account-display-name">Display Name</label>
+                                    <input type="text" id="account-display-name" name="display-name">
+                                    <small>This will be how your name will be displayed in the account section and in reviews</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="account-email">Email Address</label>
+                                    <input type="email" id="account-email" name="email" required>
+                                </div>
+                                
+                                <h3>Password Change</h3>
+                                <div class="form-group">
+                                    <label for="account-current-password">Current Password (leave blank to leave unchanged)</label>
+                                    <input type="password" id="account-current-password" name="current-password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="account-new-password">New Password (leave blank to leave unchanged)</label>
+                                    <input type="password" id="account-new-password" name="new-password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="account-confirm-password">Confirm New Password</label>
+                                    <input type="password" id="account-confirm-password" name="confirm-password">
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary">Save Changes</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Shoply</h3>
+                    <p>Your one-stop shop for all your needs.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="#">All Products</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Best Sellers</a></li>
+                        <li><a href="#">Deals & Promotions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get special offers and updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Shoply. All rights reserved.</p>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="notification" class="notification"></div>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/cart.js"></script>
+</body>
+</html>
