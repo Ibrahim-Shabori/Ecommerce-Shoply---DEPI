@@ -1,0 +1,12 @@
+D:\Programming\MVC\MVC Practise\BookieStore.Utility\bin\Debug\net9.0\ShoplyStore.Utility.deps.json
+D:\Programming\MVC\MVC Practise\BookieStore.Utility\bin\Debug\net9.0\ShoplyStore.Utility.dll
+D:\Programming\MVC\MVC Practise\BookieStore.Utility\bin\Debug\net9.0\ShoplyStore.Utility.pdb
+D:\Programming\MVC\MVC Practise\BookieStore.Utility\obj\Debug\net9.0\ShoplyStore.Utility.csproj.AssemblyReference.cache
+D:\Programming\MVC\MVC Practise\BookieStore.Utility\obj\Debug\net9.0\ShoplyStore.Utility.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\MVC\MVC Practise\BookieStore.Utility\obj\Debug\net9.0\ShoplyStore.Utility.AssemblyInfoInputs.cache
+D:\Programming\MVC\MVC Practise\BookieStore.Utility\obj\Debug\net9.0\ShoplyStore.Utility.AssemblyInfo.cs
+D:\Programming\MVC\MVC Practise\BookieStore.Utility\obj\Debug\net9.0\ShoplyStore.Utility.csproj.CoreCompileInputs.cache
+D:\Programming\MVC\MVC Practise\BookieStore.Utility\obj\Debug\net9.0\ShoplyStore.Utility.dll
+D:\Programming\MVC\MVC Practise\BookieStore.Utility\obj\Debug\net9.0\refint\ShoplyStore.Utility.dll
+D:\Programming\MVC\MVC Practise\BookieStore.Utility\obj\Debug\net9.0\ShoplyStore.Utility.pdb
+D:\Programming\MVC\MVC Practise\BookieStore.Utility\obj\Debug\net9.0\ref\ShoplyStore.Utility.dll
